@@ -1,0 +1,44 @@
+package choucair.myextra.interactions;
+
+import choucair.myextra.util.Evidencia;
+import choucair.myextra.util.myextra.MyExtra_init;
+import choucair.myextra.util.myextra.Screen;
+import choucair.myextra.util.myextra._Session;
+import choucair.myextra.util.myextra._System;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Interaction;
+
+public class EscribirTexto implements Interaction{
+
+	
+	private String texto;
+	private int fila;
+	private int columna;
+	public _System sSystem = null;
+	public Screen screen = null;
+	public _Session Sess0 = null;
+	public int g_HostSettleTime = 3000;
+	Evidencia evidencia = new Evidencia();
+	
+	public EscribirTexto(String texto, int fila, int columna) {
+		this.texto = texto;
+		this.fila = fila;
+		this.columna = columna;
+	}
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		
+		sSystem = MyExtra_init.crearSistema();
+		Sess0 = MyExtra_init.crearSesion(sSystem);
+		screen = MyExtra_init.crearPantalla(Sess0);
+		screen.putString(texto, fila, columna, null);
+		screen.waitHostQuiet(g_HostSettleTime);
+		Evidencia.captureScreen();
+		
+		
+		
+		
+	}
+
+}
