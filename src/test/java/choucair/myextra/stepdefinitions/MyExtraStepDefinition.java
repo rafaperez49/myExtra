@@ -24,8 +24,6 @@ public class MyExtraStepDefinition {
 	@Managed(driver="chrome")
 	private WebDriver suNavegador;	
 	private Actor rafa= Actor.named("Rafa");
-	
-	
 	@Before public void setup()
 	{
 		rafa.can(BrowseTheWeb.with(suNavegador));
@@ -36,12 +34,9 @@ public class MyExtraStepDefinition {
 		rafa.attemptsTo(Abrir.myExtra());
 	}
 
-
-	@Cuando("^él ingresa sus (.*)$")
-	public void él_ingresa_sus_credenciales(String credenciales) {
-		
+	@Cuando("^él ingresa sus credenciales$")
+	public void él_ingresa_sus_credenciales() {
 		rafa.attemptsTo(Loguearse.enMyExtra());
-		
 	}
 	
 	@Cuando("^Navega en un menu$")
@@ -53,7 +48,6 @@ public class MyExtraStepDefinition {
 	@Entonces("^verifica que inició sesión correctamente$")
 	public void verifica_que_inició_sesión_correctamente(){
 		rafa.should(seeThat(LaRespuesta.es(), equalTo("Introducir sentencias SQL")));
-		
 	}
 
 }

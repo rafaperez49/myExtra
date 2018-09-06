@@ -1,5 +1,6 @@
 package choucair.myextra.interactions;
 
+import choucair.myextra.util.Evidencia;
 import choucair.myextra.util.myextra.MyExtra_init;
 import choucair.myextra.util.myextra.Screen;
 import choucair.myextra.util.myextra._Session;
@@ -53,7 +54,7 @@ public class Hasta implements Interaction{
 				break;
 			}
 		}
-		
+		Evidencia.captureScreen();
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}

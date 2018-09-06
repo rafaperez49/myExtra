@@ -12,8 +12,6 @@ public class Abrir implements Task{
 	actor.attemptsTo(Iniciar.attachmateMyExtra());
 		
 	}
-
-
 	public static Abrir myExtra() {
 		
 		return new Abrir();

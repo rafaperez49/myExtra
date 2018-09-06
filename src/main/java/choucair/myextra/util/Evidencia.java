@@ -22,8 +22,8 @@ public class Evidencia {
 
             Rectangle recCapture = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
             BufferedImage Image = rbRobot.createScreenCapture(recCapture);
-           // String path = "./target/site/serenity/helloItsme.png";
             ImageIO.write(Image, "png", new File("D:/exito/evidencia.png"));
+            
             Serenity.getWebdriverManager().getCurrentDriver().get("D:/exito/evidencia.png");
             Serenity.takeScreenshot();
             

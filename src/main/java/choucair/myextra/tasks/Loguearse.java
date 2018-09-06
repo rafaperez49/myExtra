@@ -14,13 +14,12 @@ public class Loguearse implements Task{
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		
-		actor.attemptsTo(Escribir.elTexto("CDRORREGO").en(6, 53));
-		actor.attemptsTo(Escribir.elTexto("tester07").en(7, 53));
+		actor.attemptsTo(Escribir.elTexto("CYEARIAS").en(6, 53));
+		actor.attemptsTo(Escribir.elTexto("pruebas07").en(7, 53));
+		
 		actor.attemptsTo(Digitar.laTecla(Keys.ENTER));
+		
 		actor.attemptsTo(Ir.hastaVerTexto("Ubicarse:").en(5, 7));
-	
-		
-		
 		}
 
 	public static Loguearse enMyExtra() {
