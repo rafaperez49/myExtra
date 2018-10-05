@@ -26,6 +26,7 @@ public class MyExtraStepDefinition {
 	private Actor rafa= Actor.named("Rafa");
 	int a=10;
 	int b=23;
+	int c=30;
 	@Before public void setup()
 	{
 		rafa.can(BrowseTheWeb.with(suNavegador));
