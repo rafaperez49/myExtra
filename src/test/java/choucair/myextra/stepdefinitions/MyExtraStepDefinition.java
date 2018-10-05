@@ -24,9 +24,11 @@ public class MyExtraStepDefinition {
 	@Managed(driver="chrome")
 	private WebDriver suNavegador;	
 	private Actor rafa= Actor.named("Rafa");
+	int a=10;
 	@Before public void setup()
 	{
 		rafa.can(BrowseTheWeb.with(suNavegador));
+		a=20;
 	}
 	
 	@Dado("^que Rafa desea realizar consultas en AS400, Rafa abre my extra$")
