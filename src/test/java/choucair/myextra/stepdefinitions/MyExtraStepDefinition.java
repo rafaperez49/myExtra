@@ -27,6 +27,7 @@ public class MyExtraStepDefinition {
 	int a=10;
 	int b=23;
 	int c=30;
+	int d=90;
 	@Before public void setup()
 	{
 		rafa.can(BrowseTheWeb.with(suNavegador));
