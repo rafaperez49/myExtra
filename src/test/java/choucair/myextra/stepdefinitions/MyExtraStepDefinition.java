@@ -28,7 +28,7 @@ public class MyExtraStepDefinition {
 	@Before public void setup()
 	{
 		rafa.can(BrowseTheWeb.with(suNavegador));
-		a=20;
+		a=50;
 	}
 	
 	@Dado("^que Rafa desea realizar consultas en AS400, Rafa abre my extra$")
